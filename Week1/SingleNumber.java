@@ -1,7 +1,5 @@
 package Week1;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class SingleNumber {
@@ -13,6 +11,7 @@ public class SingleNumber {
             arr[i] = in.nextInt();
         }
         System.out.println(singleNumber(arr));
+        in.close();
     }
 
     public static int singleNumber(final int[] nums) {
