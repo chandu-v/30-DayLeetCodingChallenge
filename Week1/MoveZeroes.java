@@ -13,21 +13,38 @@ public class MoveZeroes {
 
     private static int[] MoveZeroes(int[] nums) {
         // int rep = 0;
-        int i = nums.length-1;
-        while(i >=0){
-            if(nums[i] == 0 &&  i<=nums.length-1){
-                for(int j = i; j<nums.length-1 ; j++){
-                    if(nums[j+1] == 0){
-                        break;
-                    }
-                    nums[j] = nums[j+1];
-                    nums[j+1] = 0;
-                    // rep++;
-                }
+        ArrayList<Integer> non_zeroes = new ArrayList<>();
+        for(int j = 0 ; j < nums.length ; j++){
+            if(nums[j] != 0){
+                non_zeroes.add(nums[j]);
             }
-            // printArray(nums);
-            i--;
         }
+        for(int k : non_zeroes){
+            System.out.println(k);
+        }
+        int i = 0 ;
+        while(i!=non_zeroes.size()){
+            nums[i] = non_zeroes.get(i);
+            i++;
+        }
+        while(i<nums.length){
+            nums[i] = 0;
+            i++;
+        }
+        // while(i >=0){
+        //     if(nums[i] == 0 &&  i<=nums.length-1){
+        //         for(int j = i; j<nums.length-1 ; j++){
+        //             if(nums[j+1] == 0){
+        //                 break;
+        //             }
+        //             nums[j] = nums[j+1];
+        //             nums[j+1] = 0;
+        //             // rep++;
+        //         }
+        //     }
+        //     // printArray(nums);
+        //     i--;
+        // }
         // System.out.println(rep);
         return nums;
     }
