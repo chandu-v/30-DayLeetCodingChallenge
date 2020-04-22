@@ -12,23 +12,23 @@ public class MoveZeroes {
     }
 
     private static int[] MoveZeroes(int[] nums) {
-        int rep = 0;
+        // int rep = 0;
         int i = nums.length-1;
         while(i >=0){
             if(nums[i] == 0 &&  i<=nums.length-1){
                 for(int j = i; j<nums.length-1 ; j++){
-                    // if(nums[j+1] == 0){
-                    //     break;
-                    // }
+                    if(nums[j+1] == 0){
+                        break;
+                    }
                     nums[j] = nums[j+1];
                     nums[j+1] = 0;
-                    rep++;
+                    // rep++;
                 }
             }
-            printArray(nums);
+            // printArray(nums);
             i--;
         }
-        System.out.println(rep);
+        // System.out.println(rep);
         return nums;
     }
 
