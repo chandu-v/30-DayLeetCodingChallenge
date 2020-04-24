@@ -82,12 +82,18 @@ public class TreeNodeSolution {
             System.out.println(treeNode.val+"\t"+height);
         }
     }
-    
+
     private static boolean isLeafNode(TreeNode treeNode){
         if(treeNode.left == null && treeNode.right == null){
             return true;
         }else{
             return false;
         }
+    }
+
+    private static int distanceBetweenTwoNodes(TreeNode src,TreeNode dst){
+        int distance = 0;
+        
+        return distance;
     }
 }
