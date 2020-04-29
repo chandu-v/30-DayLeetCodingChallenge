@@ -30,7 +30,6 @@ public class SubArraySum {
         boolean result = false;
         int sum = 0;
         for(int i = start ; i <= end ; i++){
-            
             sum+=nums[i];
         }
         if(sum == k){
